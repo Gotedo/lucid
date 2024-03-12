@@ -1,5 +1,5 @@
 {
-  "name": "@adonisjs/lucid",
+  "name": "@gotedo/lucid",
   "version": "18.4.2",
   "description": "SQL ORM built on top of Active Record pattern",
   "engines": {
@@ -40,14 +40,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adonisjs/lucid.git"
+    "url": "git+https://github.com/gotedo/lucid.git"
   },
-  "author": "virk,adonisjs",
+  "author": "virk,adonisjs,gotedo,ndianabasi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adonisjs/lucid/issues"
+    "url": "https://github.com/gotedo/lucid/issues"
   },
-  "homepage": "https://github.com/adonisjs/lucid#readme",
+  "homepage": "https://github.com/gotedo/lucid#readme",
   "dependencies": {
     "@faker-js/faker": "^8.0.1",
     "@poppinss/hooks": "^5.0.3",
@@ -146,9 +146,14 @@
     }
   },
   "np": {
+    "yarn": false,
+    "yolo": true,
     "contents": ".",
     "anyBranch": false,
-    "yolo": true
+    "publish": false,
+    "branch": "v18_legacy",
+    "releaseDraft": true,
+    "message": "chore: bump version to %s 🚀"
   },
   "mrmConfig": {
     "core": true,
