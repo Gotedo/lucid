@@ -4565,7 +4565,7 @@ test.group('Base Model | hooks', (group) => {
   })
 
   test('invoke before and after paginate hooks', async ({ assert }) => {
-    assert.plan(5)
+    assert.plan(6)
 
     class User extends BaseModel {
       @column({ isPrimary: true })
