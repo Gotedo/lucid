@@ -238,6 +238,7 @@ export class Connection extends EventEmitter implements ConnectionContract {
         debug: false,
       })
     )
+    // @ts-ignore
     patchKnex(this.client, this.writeConfigResolver.bind(this))
   }
 
@@ -257,6 +258,7 @@ export class Connection extends EventEmitter implements ConnectionContract {
         debug: false,
       })
     )
+    // @ts-ignore
     patchKnex(this.readClient, this.readConfigResolver.bind(this))
   }
 
