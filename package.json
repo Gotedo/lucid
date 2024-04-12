@@ -151,7 +151,7 @@
     "yolo": true,
     "contents": ".",
     "anyBranch": false,
-    "publish": false,
+    "publish": true,
     "branch": "v18_legacy",
     "releaseDraft": true,
     "message": "chore: bump version to %s 🚀"
