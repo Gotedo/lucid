@@ -200,7 +200,7 @@ export class DatabaseQueryBuilder extends Chainable implements DatabaseQueryBuil
   public async firstOrFail(): Promise<any> {
     const row = await this.first()
     if (!row) {
-      throw new Exception('Row not found', 404, 'E_ROW_NOT_FOUND')
+      throw new Exception(`Row not found: ${this.knexQuery.table}`, 404, 'E_ROW_NOT_FOUND')
     }
 
     return row
