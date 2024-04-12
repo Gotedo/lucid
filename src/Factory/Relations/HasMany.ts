@@ -42,7 +42,7 @@ export class HasMany extends BaseRelation implements FactoryRelationContract {
       .tap((related) => {
         related.merge(customAttributes)
       })
-      .makeStubbedMany(count || 1)
+      .makeStubbedMany(typeof count === 'number' ? count : count || 1)
 
     parent.$setRelated(this.relation.relationName, instances)
   }

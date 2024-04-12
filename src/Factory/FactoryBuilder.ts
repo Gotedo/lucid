@@ -448,6 +448,10 @@ export class FactoryBuilder implements FactoryBuilderContract<FactoryModelContra
   public async makeStubbedMany(count: number) {
     let modelInstances: LucidRow[] = []
 
+    if (!count) {
+      return modelInstances
+    }
+
     const counter = new Array(count).fill(0).map((_, i) => i)
     for (let index of counter) {
       this.currentIndex = index

@@ -41,7 +41,7 @@ export class ManyToMany extends BaseRelation implements FactoryRelationContract 
    */
   public async make(parent: LucidRow, callback?: RelationCallback, count?: number) {
     const builder = this.compile(this, parent, callback)
-    const instances = await builder.makeStubbedMany(count || 1)
+    const instances = await builder.makeStubbedMany(typeof count === 'number' ? count : count || 1)
     parent.$setRelated(this.relation.relationName, instances)
   }
 

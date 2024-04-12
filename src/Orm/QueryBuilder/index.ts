@@ -475,7 +475,7 @@ export class ModelQueryBuilder extends Chainable implements ModelQueryBuilderCon
   public async firstOrFail(): Promise<any> {
     const row = await this.first()
     if (!row) {
-      throw new Exception('Row not found', 404, 'E_ROW_NOT_FOUND')
+      throw new Exception(`Row not found: ${this.model.name}`, 404, 'E_ROW_NOT_FOUND')
     }
 
     return row
